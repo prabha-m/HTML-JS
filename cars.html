@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <style>
+        .styling{
+            display: none
+        }
+        .outline{
+           
+            padding:5px;
+            display: inline-block;
+        }
+        </style>
+    </head>
+    <body>
+        <center>
+        <form>
+        <select id="car" onchange="cars()">
+        <option value="0"><b>Choose your car</b></option>
+        <option value="1">VOLKSWAGEN</option>
+        <option value="2">HYUNDAI</option>
+        <option value="3">RENAULT</option>
+        </select>    
+        </form>
+        </center>
+        <div id="gallery1" class="styling">
+            <div class="outline">
+            <a href="#" onclick="Test(1)"> <img src="v1.jpg"></a>
+            </div>
+        <div class="outline">
+            <a href="#" onclick="Test(2)"> <img src="v2.jpg" > </a>
+        </div>
+        <div class="outline">
+            <a href="#" onclick="Test(3)"> <img src="v3.jpg" > </a>
+        </div>
+        <div class="container"></div>
+    <script>
+    function cars(){
+    var x= document.getElementById("car")
+    var value = x.options[x.selectedIndex].value;
+    var gall1= document.getElementById("gallery1");
+    if (value==1){gall1.className=" ";}
+    }
+    </script>
+
+    </body>
+</html>

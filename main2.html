@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 4px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+    content:"";
+    clear: both;
+    display: table;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.column:hover .dropdown-content {
+    display: block;
+}
+.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+</style>
+</head>
+<body style="text-align: center;">
+
+<h2 style="font-size: 40px;color: red">Images Of Hyderabad</h2>
+<br>
+<br>
+<hr>
+<div class="row">
+ <div class="column"style="display: inline-block;" >
+    <img src="https://i.ytimg.com/vi/7gCbkTtj8YA/maxresdefault.jpg" alt="Golconda-Fort" style="width:100%">
+     <div class="dropdown-content">
+    <p class="desc" style="color: blue;font-size: 25px;font-family: sans-serif;">A medieval fort now overlooking the city, Golconda is one of the historical places to visit in Hyderabad.<br> Originally built in mud on a 400ft hill, the fort ruins of today have seen the reign of several dynasties.<br> Situated 11km away from the bustling urbanism of Hyderabad.</p>
+  </div>
+</div>
+  <div class="column" style="display: inline-block;">
+    <img src="https://1.bp.blogspot.com/-_Wu0Iws-aLc/WWXIOWxSpgI/AAAAAAAABrU/p-76EOk0hyg5k0SH62TU7rD949UZoc88gCLcBGAs/s1600/charminar-muhammad-quli-qutb-shahi.jpg"style="width:80%">
+    <div class="dropdown-content">
+    <p class="desc" style="color: blue;font-size: 25px;font-family: sans-serif; ">The epic signature of the city, Char Minar makes for a wonderful sight.<br> Located in the heart of Hyderabad’s old city, surrounded by Mecca Masjid, built using bricks from Mecca and Laad Bazaar<br> - a boisterous shopping street, this landmark is laced in history.<br>Built in 1591 by Muhammad Quli Qutub Shah.</p>
+  </div>
+</div>
+  <div class="column" style="padding:0px">
+    <img src="http://www.ntvtelugu.com/wp-content/uploads/2018/04/Makkah-masjid.jpg" alt="Mecca-Masjid" style="width:100%">
+    <div class="dropdown-content">
+    <p class="desc" style="color: blue;font-size: 25px;font-family: sans-serif;">Listed among heritage monuments in Hyderabad, Mecca Masjid or Makka Masjid as referred<br> by locals holds a distinct position of not just being the oldest mosques in the city but is also one of India’s biggest.<br>This 400year old monument was constructed using the soil from Mecca. Hence the name.</p>
+  </div>
+
+
+  </div>
+  </div>
+
+
+</body>
+</html>
