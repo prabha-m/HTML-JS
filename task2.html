@@ -1,0 +1,200 @@
+<html>
+    <head>
+<<<<<<< HEAD
+        <title>Likes and Dislikes</title>
+        <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+     <body>
+           <h1 style="text-align:center">FACEBOOK</h1>
+           <i class="fa fa-thumbs-o-up"
+             id="like"
+              onclick="like()"
+             style="font-size:48px;color:black"
+             >
+            </i> &nbsp;
+           <span id="likeCount"></span>&nbsp;
+
+       <script>
+          var likes=0;
+          document.getElementById("likeCount").innerHTML=likes;
+
+         
+         function like(){
+            if (likes==0)
+            {
+              likes++
+                document.getElementById("likeCount").innerHTML=likes;  
+            }
+            else{
+              likes--
+              document.getElementById("likeCount").innerHTML=likes;}
+         }
+       </script>    
+     </body>
+</html>
+=======
+    <title>
+        DropDownList
+    </title>
+    <style>
+    .styling{
+        display:none;
+    }
+    </style>
+    </head>
+    
+    <body>
+        <h1 style="color:blue; font-family:'Times New Roman', Times, serif">
+        <center>DIGITAL LYNC</center></h1>
+        <br><br>
+        <form style="color:crimson"><center>
+        <b>COURSES :</b> <select id="details" onchange="details1()">
+            <option value="0">SelectCourse</option>
+            <option value="1">HTML</option>
+            <option value="2">CSS</option>
+            <option value="3">JavaScript</option>
+            <option value="4">Python</option>
+            <option value="5">C#</option>
+        </select>    
+        </center> </form>
+        <center>
+        <table id="htmltable" class="styling">
+            <tr>
+                <th>
+                    HTML
+                </th>
+            </tr>
+                <tr>
+                    <td>
+                    HTML is the standard markup language for creating Web pages.<br>
+                    HTML stands for Hyper Text Markup Language<br>
+                    HTML describes the structure of Web pages using markup<br>
+                    HTML elements are the building blocks of HTML pages<br>
+                    HTML elements are represented by tags<br>
+                    HTML tags label pieces of content such as "heading", "paragraph", "table", and so on<br>
+                    Browsers do not display the HTML tags, but use them to render the content of the page
+                    </td>
+                </tr>
+            </table>
+            <table id="csstable" class="styling">
+                <tr>
+                    <th>
+                        CSS
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                    CSS stands for Cascading Style Sheets<br>
+                    CSS describes how HTML elements are to be displayed on screen, paper, or in other media<br>
+                    CSS saves a lot of work. It can control the layout of multiple web pages all at once<br>
+                    External stylesheets are stored in CSS files
+                    </td>
+                </tr>
+            </table>
+            <table id="javaStable" class="styling">
+                    <tr>
+                        <th>
+                            JAVASCRIPT
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                        JavaScript is a lightweight, interpreted programming language.<br>
+                        Designed for creating network-centric applications.<br>
+                        Complementary to and integrated with Java.<br>
+                        Complementary to and integrated with HTML.
+                        </td>
+                    </tr>
+            </table>
+            <table id="pythontable" class="styling">
+                    <tr>
+                        <th>
+                            PYTHON
+                        </th>
+                    </tr>
+                    <tr>
+                      <td>  Python can be used on a server to create web applications.<br>
+                            Python can be used alongside software to create workflows. <br>
+                        Python can connect to database systems. It can also read and modify files.<br>
+                        Python can be used to handle big data and perform complex mathematics.<br>
+                        Python can be used for rapid prototyping, or for production-ready software development.
+                        </td>
+                    </tr>
+            </table>
+            <table id="csharptable" class="styling">
+                    <tr>
+                        <th>
+                            C#
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                        It is a modern, general-purpose programming language<br>
+                        It is object oriented.<br>
+                        It is component oriented.<br>
+                        It is easy to learn.<br>
+                        It is a structured language.
+                        </td>
+                    </tr>
+                </table>
+            </center>
+
+
+<script>
+    function details1(){
+        var a= document.getElementById("details");
+        var value = a.options[a.selectedIndex].value;
+        var tablecss= document.getElementById("csstable");
+        var tablehtml = document.getElementById("htmltable");
+        var tablejavaS = document.getElementById("javaStable");
+        var tablepython = document.getElementById("pythontable");
+        var tablecsharp = document.getElementById("csharptable");
+        if (value==0){tablehtml.className= "styling";
+            tablecss.className= "styling";
+            tablejavaS.className="styling";
+            tablecsharp.className="styling";
+            tablepython.className="styling";
+
+        }
+        else if (value==1) {
+            tablehtml.className= " ";
+            tablecss.className= "styling";
+            tablejavaS.className="styling";
+            tablecsharp.className="styling";
+            tablepython.className="styling";
+        }
+        else if (value==2) {
+            tablecss.className= " ";
+            tablehtml.className= "styling";
+            tablejavaS.className="styling";
+            tablecsharp.className="styling";
+            tablepython.className="styling";
+        }
+        else if (value==3) {
+            tablejavaS.className=" ";
+            tablehtml.className= "styling";
+            tablecss.className= "styling";
+            tablecsharp.className="styling";
+            tablepython.className="styling";
+        }
+        else if (value==4) {
+            tablepython.className=" ";
+            tablecss.className= "styling";
+            tablehtml.className= "styling";
+            tablejavaS.className="styling";
+            tablecsharp.className="styling";
+        }
+        else if (value==5) {
+            tablecsharp.className=" ";
+            tablecss.className= "styling";
+            tablehtml.className= "styling";
+            tablejavaS.className="styling";
+            tablepython.className="styling";
+        }
+    }
+
+</script>
+    </body>
+    </html>
+>>>>>>> 147c2f8244b5062181ea78354dd6f1448c69b111
