@@ -1,0 +1,51 @@
+<html>
+   <head> 
+       <title>REGISTRATION FORM</title>
+    </head>
+    <body style="background:coral">
+        <div class="bg-img">
+        <h1 style="color:brown"><center>REGISTER HERE</center></h1>
+        <br>
+        <hr>
+        <br>
+        <form action= "/action_logo.jpg" class="container" style="color:blue">
+            <center>
+                USERNAME: <input type="text" name="username" >
+                <br>
+                <br>
+                PASSWORD: <input type="password" name="password">
+                <br>
+                <br>
+                EMAILID: <input type="text" name="emailid">
+                <br>
+                <br>
+                QUALIFICATION:
+                <select>
+                    <option> MTech </option>
+                    <option> BTech </option>
+                    <option> BSc   </option>
+                </select> 
+                <br>
+                <br>
+                <select id="selectcities" onchange="cities()">
+                <option value="0">SELECT CITY</option>
+                <option value="1">VISAKHAPATNAM</option>
+                <option value="2">HYDERABAD</option>
+                <option value="3">DELHI</option>
+                </select><br><br>
+                COURSE:
+                <input type="radio" name="course">Full Time
+                <input type="radio" name="course">Part Time
+                <br>
+                <br>
+                <input type="checkbox">I hereby agree to the terms and conditions 
+                <br>
+                <br>
+                <button>
+                    Submit
+                </button>
+
+            </center>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<html>
+    <body>
+        <form>
+            <input type="text" id="username" placeholder="username">
+
+            <input type="password" id="password" placeholder="password">
+
+            <input type="submit" onclick="validate()" value="submit">
+
+            <script>
+            function validate(){
+                event.preventDefault();
+                var username=document.getElementById("username").value;
+                var password=document.getElementById("password").value;
+                var x=["!","@","#","$","%","^","&","*","?","~","/","."]
+                if (username.length<=0){
+                    alert("username should not be empty");
+                    return;
+                }
+                if (username.length<6){
+                    alert("username should be minimum 6 characters");
+                    return;
+                }
+                for (var i=0;i<x.length;i++){
+                    if(password.includes('@') | password.includes('$'))
+                    {
+                        alert("found special character");
+                       break;      
+                    }
+                    else{
+                        alert("should include special char");
+                        return;
+                    }
+                }
+                if (password.length<=0){
+                    alert("password should not be empty");
+                    return;
+                }
+                if (password.length<6){
+                    alert("password should be minimum 6 characters");
+                    return;
+                }
+            }
+            </script>
+        </form>
+    </body>
+</html>

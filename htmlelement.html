@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <div id="first">
+            <img src="js.jpg">
+            <p id="p1">JAVASCRIPT</p>
+            <p id="p2">HTML</p>
+        </div>
+        <script>
+        var para=document.createElement("p");
+        var node=document.createTextNode("TASK");
+        para.appendChild(node);
+        var element=document.getElementById("first");
+        element.appendChild(para);
+        </script>
+    </body>
+</html>

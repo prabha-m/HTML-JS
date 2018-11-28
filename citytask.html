@@ -1,0 +1,241 @@
+<html>
+    <head>
+        <style>
+        .styling {
+            display: none;
+        }
+        .look {
+            color: blue;
+        }
+        </style>
+    </head>
+    <body>
+        <center><form>
+        <select id="selectcities" onchange="cities()">
+        <option value="0">SELECT CITY</option>
+        <option value="1">VISAKHAPATNAM</option>
+        <option value="2">HYDERABAD</option>
+        <option value="3">DELHI</option>
+        </select>
+        </form></center>
+        <center><div id="vizag" class="styling">
+         <a href="#" onclick="Test(1)"> <img src="vimg1.jpg"> </a>
+         <a href="#" onclick="Test(2)"> <img src="vimg2.jpg"> </a>
+         <a href="#" onclick="Test(3)"> <img src="vimg3.jpg"> </a>
+        </div>
+        <div id="hyderabad" class="styling">
+        <a href="#" onclick="Test(4)"> <img src="hyd1.jpg"> </a>
+        <a href="#" onclick="Test(5)"> <img src="hyd2.jpg"></a>
+        <a href="#" onclick="Test(6)"> <img src="hyd3.jpg"></a>
+        </div>
+        <div id="delhi" class="styling">
+        <a href="#" onclick="Test(7)"><img src="dl1.jpg"></a>
+        <a href="#" onclick="Test(8)"><img src="dl2.jpg"></a>
+        <a href="#" onclick="Test(9)"><img src="dl3.jpg"></a>
+        </div>
+        </center>
+
+        <center>
+            <p id="p1" class="styling look">
+            Visakhapatnam (Vizag) is Andhra Pradesh’s second-largest city and there’s no escaping its beaches.<br>
+            Visakhapatnam’s long shoreline can be pretty busy with beach activities.<br>
+            Flanked by lush rolling greens with the odd naval ship on the horizon, it makes for a pretty sight.<br>
+            Andhra Pradesh’s coastline, including Visakhapatnam and its beaches, are alternately peaceful or bustling with a festive atmosphere.<br> 
+            You can even find surfing spots along its seashore.
+            </p>
+            <p id="p2" class="styling look">
+            Kailasagiri is a hill top park in the city of Vishakhapatnam.<br>
+            The hill is at 360 feet and it overlooks beaches, forests & the city of Vishakhapatnam.<br>
+            It is one of the best tourist spots in the city for a bird's eye view of the bay.
+            </p>
+            <p id="p3" class="styling look">
+            INS Kursura (S20) was a Kalvari-class diesel-electric submarine of the Indian Navy.<br>
+            She was India's fifth submarine.<br>
+            Kursura was commissioned on 18 December 1969 and was decommissioned on 27 February 2001 after 31 years of service.<br>
+            She participated in the Indo-Pakistani War of 1971, where she played a key role in patrol missions.<br>
+            She later participated in naval exercises with other nations and made many goodwill visits to other countries.
+            </p>
+            <p id="p4" class="styling look">
+            Birla Mandir in Hyderabad,dedicated to Lord Venkateshwara of Tirumala Tirupati Temple is said that a whopping quantity of white marble,<br>
+            which is almost 2000 tonnes, was brought from Rajasthan for building this temple.<br>
+            Located on the top of a hill of 280 feet, also known as Naubat Pahad, Birla Temple stands magnificently, drawing admiring glances from every passerby.<br>
+            Birla mandir one of the Top 10 tourist places to visit in Hyderabad. There are various Birla Mandir which have been built all over the country. <br>
+            These have been constructed by the industrialists Birlas and are thus popularly known by the the family that undertook the task.
+            </p>
+            <p id="p5" class="styling look">
+            Golkonda, also known as Golconda, Gol konda, or Golla konda, is a citadel and fort in Southern India and was the capital of the medieval sultanate of the Qutb Shahi dynasty<br>
+            It is situated 11 km west of Hyderabad.<br> 
+            It is also a tehsil of Hyderabad district, Telangana, India.<br>
+            The region is known for the mines that have produced some of the world's most famous gems, including the Koh-i-Noor, the Hope Diamond, Nassak Diamond and the Noor-ul-Ain.
+            </p>
+            <p id="p6" class="styling look">
+            Charminar ("Four Minarets"), constructed in 1591, is a monument and mosque located in Hyderabad, Telangana, India.<br>
+            The landmark has become a global icon of Hyderabad, listed among the most recognized structures of India.<br>
+            Charminar has been a historical place with mosque on the top floor for over 400 years and also known for its surrounding markets.<br>
+            It is one of the tourist attractions in Hyderabad.<br>
+            It is where many local festivals are celebrated, such as Ramzaan.
+            </p>
+            <p id="p7" class="styling look">
+            India Gate, official name Delhi Memorial, originally called All-India War Memorial, monumental sandstone arch in New Delhi.<br>
+            It is dedicated to the troops of British India who died in wars fought between 1914 and 1919.<br>
+            India Gate, which is located at the eastern end of the Rajpath (formerly called the Kingsway), is about 138 feet (42 metres) in height.
+            </p>
+            <p id="p8" class="styling look">
+            Red fort is one of the historic monuments located in Delhi.<br>
+            This monument gets its name from the red colored sandstone used for construction by the Mughals.<br>
+            This fort is located in the center of the city and was used as a ceremonial spot for the royals.<br>
+            Even today, the spot is used for political and national ceremonies.<br>
+            Red fort is not just about the outer beauty of the fortified wall.<br>
+            You can find many interesting attractions inside the fort like palaces, halls, museums and others.
+            </p>
+            <p id="p9" class="styling look">
+            Akshardham Temple of New Delhi is also known as Swaminarayan Akshardham Temple.<br>
+            It is one of the largest Hindu temple complexes in India.<br>
+            It was officially inaugurated on 6th November, 2005.<br>
+            Its history and facts reflects 10,000 years old India’s culture, spirituality and architecture.<br>
+            It has been made in the memory of Jyotirdhar Swaminarayan Bhagwan. 
+            </p>
+        </center>
+
+    <script>
+    function cities() {
+    var x= document.getElementById("selectcities")
+    var value = x.options[x.selectedIndex].value;
+    var cityvizag= document.getElementById("vizag");
+    var cityhyd= document.getElementById("hyderabad");
+    var citydelhi= document.getElementById("delhi");
+    if (value==0){
+        cityvizag.className="styling";
+        cityhyd.className="styling";
+        citydelhi.className="styling";
+    }
+    if (value==1) {
+        cityvizag.className=" ";
+        cityhyd.className="styling";
+        citydelhi.className="styling";
+    }
+    else if (value==2) {
+        cityhyd.className=" ";
+        cityvizag.className="styling";
+        citydelhi.className="styling";
+    }
+    else if (value==3) {
+        citydelhi.className=" ";
+        cityhyd.className="styling";
+        cityvizag.className="styling";
+    }
+    }
+    function Test(clickvalue){
+            var click= clickvalue;
+            var vzgp1=document.getElementById("p1");
+            var vzgp2=document.getElementById("p2");
+            var vzgp3=document.getElementById("p3");
+            var hydp1=document.getElementById("p4");
+            var hydp2=document.getElementById("p5");
+            var hydp3=document.getElementById("p6");
+            var delp1=document.getElementById("p7");
+            var delp2=document.getElementById("p8");
+            var delp3=document.getElementById("p9");
+            if (click==1){   
+                vzgp1.className="look";
+                vzgp2.className="styling";
+                vzgp3.className="styling";
+                hydp1.className="styling";
+                hydp2.className="styling";
+                hydp3.className="styling";
+                delp1.className="styling";
+                delp2.className="styling";
+                delp3.className="styling";
+            }
+            else if (click==2){ 
+                vzgp2.className="look";
+                vzgp1.className="styling";
+                vzgp3.className="styling";
+                hydp1.className="styling";
+                hydp2.className="styling";
+                hydp3.className="styling";
+                delp1.className="styling";
+                delp2.className="styling";
+                delp3.className="styling";
+            }
+            else if (click==3){   
+                vzgp3.className="look";
+                vzgp2.className="styling";
+                vzgp1.className="styling";
+                hydp1.className="styling";
+                hydp2.className="styling";
+                hydp3.className="styling";
+                delp1.className="styling";
+                delp2.className="styling";
+                delp3.className="styling";
+            }
+            else if (click==4){    
+                hydp1.className="look";
+                vzgp2.className="styling";
+                vzgp3.className="styling";
+                vzgp1.className="styling";
+                hydp2.className="styling";
+                hydp3.className="styling";
+                delp1.className="styling";
+                delp2.className="styling";
+                delp3.className="styling";
+            }
+            else if (click==5){  
+                hydp2.className="look";
+                vzgp2.className="styling";
+                vzgp3.className="styling";
+                hydp1.className="styling";
+                vzgp1.className="styling";
+                hydp3.className="styling";
+                delp1.className="styling";
+                delp2.className="styling";
+                delp3.className="styling";
+            }
+            else if (click==6){  
+                hydp3.className="look";
+                vzgp2.className="styling";
+                vzgp3.className="styling";
+                hydp1.className="styling";
+                hydp2.className="styling";
+                vzgp1.className="styling";
+                delp1.className="styling";
+                delp2.className="styling";
+                delp3.className="styling";
+            }
+            else if (click==7){  
+                delp1.className="look";
+                vzgp2.className="styling";
+                vzgp3.className="styling";
+                hydp1.className="styling";
+                hydp2.className="styling";
+                hydp3.className="styling";
+                vzgp1.className="styling";
+                delp2.className="styling";
+                delp3.className="styling";
+            }
+            else if (click==8){  
+                delp2.className="look";
+                vzgp2.className="styling";
+                vzgp3.className="styling";
+                hydp1.className="styling";
+                hydp2.className="styling";
+                vzgp1.className="styling";
+                hydp3.className="styling";
+                delp1.className="styling";
+                delp3.className="styling";
+            }
+            else if (click==9){  
+                delp3.className="look";
+                vzgp2.className="styling";
+                vzgp3.className="styling";
+                hydp1.className="styling";
+                hydp2.className="styling";
+                vzgp1.className="styling";
+                hydp3.className="styling";
+                delp2.className="styling";
+                delp1.className="styling";
+            }
+    }
+    </script>
+    </body>
+</html>

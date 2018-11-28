@@ -1,0 +1,44 @@
+<html>
+    <head>
+            <style>
+                    #card{
+                        max-width: 200px;
+                        outline: 2px;
+                        /*border-radius:10PX;*/
+                        background-color: gray;
+                        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+                        text-align: center; 
+                    }
+            </style>
+    </head>
+    <body><center>
+        <form>
+            product_name: <input type="text" id="p_name">
+            product_id: <input type="text" id="p_id">
+            product_price: <input type="text" id="p_price">
+            product_image: <input type="text" id="p_url">
+            <!-- <button onclick="display()">SUBMIT</button> -->
+            <input id="show" type="button" value="Submit" onclick=display()>
+        </form></center>
+        <div>
+            <img id="pimg" width="150px">
+            <p id="pn"></p>
+            <p id="pid"></p>
+            <p id="pp"></p>
+        </div>
+    </body>
+        <script>
+            function display(){
+                event.preventDefault();
+                var p_name=document.getElementById("p_name").value;
+                var p_id=document.getElementById("p_id").value;
+                var p_price=document.getElementById("p_price").value;
+                var p_url=document.getElementById("p_url").value;
+                
+                document.getElementById("pn").innerHTML=p_name;
+                document.getElementById("pid").innerHTML=p_id;
+                document.getElementById("pp").innerHTML=p_price;
+                document.getElementById("pimg").src=p_url;
+            }
+        </script>
+</html>

@@ -1,0 +1,142 @@
+<html>
+    <head>
+        <style>
+            .cardStyle{
+                max-width: 300;
+                max-height: 300;
+                border-radius:10PX;
+                background-color: gray;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+                text-align: center;
+                }
+            /* .closebtn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: red;
+            font-size: 35px;
+            cursor: pointer;
+        } */
+        .likebutton {
+            float: left;
+            padding-bottom: 10px;
+            
+            height: 50;
+            width: 50;
+        }
+        .dislikebutton {
+            float: left;
+            padding-bottom: 10px;
+            height: 50;
+            width: 50;
+        }
+        </style>
+    </head>
+    <body>
+        NAME:<input type="text" id="p_name"><br><br>
+        ID:<input type="text" id="p_id"><br><br>
+        PRICE:<input type="text" id="p_price"><br><br>
+        URL:<input type="text" id="p_img"  height="100px" width="150px"><br/><br/>
+        <input id="show" type="button" value="Submit" onclick=display()>
+        <!-- <img id="like"> -->
+        <div id="displaycard" >
+        
+        </div>
+    </body>
+    <script>
+    //onmouseover="zoomImg(this)" onmouseout="normalImg(this)"
+    function display()
+    {
+            event.preventDefault();
+            var divison=document.getElementById("displaycard");
+            var name=document.getElementById("p_name");
+            var id=document.getElementById("p_id");
+            var price=document.getElementById("p_price");
+            var simage=document.getElementById("p_img");
+
+            var card = document.createElement("div");
+            card.classList.add("cardStyle");
+            card.id="displaycard"+Math.random();
+            divison.appendChild(card);
+            
+            var image = document.createElement("img");
+            image.setAttribute("src",simage.value);
+            image.setAttribute("height","100px");
+            image.setAttribute("width","150px");
+            card.appendChild(image);
+
+            image.onmouseover = function(event) {
+                event.currentTarget.height="300";
+                event.currentTarget.width="300";
+            }
+            image.onmouseout = function(event) {
+                event.currentTarget.height="100";
+                event.currentTarget.width="150";
+            }
+            //image.onmouseover = function(e) {
+                //zoomImg(e);
+            //}
+            // image.onmouseover= zoomImg;
+            var paraname = document.createElement("p");
+            var node = document.createTextNode(name.value);
+            paraname.appendChild(node);
+            card.appendChild(paraname);
+            
+            var paraname2 = document.createElement("p");
+            var node = document.createTextNode(id.value);
+            paraname2.appendChild(node);
+            card.appendChild(paraname2);
+
+            var paraname3=document.createElement("p");
+            var node=document.createTextNode(price.value);
+            paraname3.appendChild(node);
+            card.appendChild(paraname3);
+
+            var hold=document.createElement("span");
+            var likebttn=document.createElement("img");
+            likebttn.setAttribute("src","like.jpg");
+            likebttn.setAttribute("height","30");
+            likebttn.setAttribute("width","30");
+            hold.appendChild(likebttn);
+            var likespan=document.createElement("span");
+            hold.appendChild(likespan);
+            hold.classList.add("likebutton");
+            card.appendChild(hold);
+            var likes=0;
+            likebttn.onclick=function(l){
+                likes++;
+                l.currentTarget.parentNode.lastChild.innerHTML=likes;
+            } 
+
+            var hold1=document.createElement("span");
+            var dislikebttn=document.createElement("img");
+            dislikebttn.setAttribute("src","dislike.jpg");
+            dislikebttn.setAttribute("height","30");
+            dislikebttn.setAttribute("width","30");
+            hold1.appendChild(dislikebttn);
+            var dislikespan=document.createElement("span");
+            hold1.appendChild(dislikespan);
+            hold1.classList.add("dislikebutton");
+            card.appendChild(hold1);
+            var dislikes=0;
+            dislikebttn.onclick=function(l){
+                dislikes++;
+                l.currentTarget.parentNode.lastChild.innerHTML=dislikes;
+            }    
+
+            var bttn=document.createElement("button");
+            var node=document.createTextNode("CLOSE");
+            bttn.appendChild(node);
+            card.appendChild(bttn);
+            bttn.onclick= function test(e) {
+            document.getElementById(e.target.parentNode.id).remove();
+            }
+    }
+            // function zoomImg(x)
+            // {
+            //     alert("working");
+            // };
+           
+           
+    </script>
+</html>
