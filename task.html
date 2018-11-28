@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Likes and Dislikes</title>
+        <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+     <body>
+           <h1 style="text-align:center">FACEBOOK</h1>
+           <i class="fa fa-thumbs-o-up"
+             id="like"
+              onclick="like()"
+             style="font-size:48px;color:black"
+             >
+            </i> &nbsp;
+           <span id="likeCount"></span>&nbsp;
+
+       <script>
+          var likes=0;
+          document.getElementById("likeCount").innerHTML=likes;
+
+         
+         function like(){
+            if (likes==0)
+            {
+              likes++
+                document.getElementById("likeCount").innerHTML=likes;  
+            }
+            else{
+              likes--
+              document.getElementById("likeCount").innerHTML=likes;}
+         }
+       </script>    
+     </body>
+</html>

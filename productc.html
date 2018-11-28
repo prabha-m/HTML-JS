@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title> Task 4 </title>
+        <style>
+           #card{
+               max-width: 200px;
+               outline: 2px;
+               /*border-radius:10PX;*/
+               background-color: gray;
+               box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+               text-align: center; 
+           }
+           img{
+            max-width: 200px;
+           } 
+        </style>
+    </head>
+
+    <body>
+    <div id="data">
+        <form>
+            Product Id: <input id="pid" type="text"> <br> <br>
+            Product Name: <input id="pname" type="text"> <br> <br>
+            Product Price: <input id="pprice" type="text"> <br> <br>
+            Product Image: <input id="pimage" type="text" height="200px" width="200px"> <br> <br>
+            <input id="show" type="button" value="Submit" onclick=display()>
+        </form>
+    </div>
+
+    <!-- <div id="card">
+        <p id="id"></p>
+        <p id="name"></p>
+        <img id="image">
+        <p id="price"></p>
+    </div> -->
+    </body>
+    <script>
+        function display(){
+            event.preventDefault();
+            var pno=document.getElementById("pid").value;
+            var name=document.getElementById("pname").value;
+            var price=document.getElementById("pprice").value;
+            var simage=document.getElementById("pimage").value;
+            // document.getElementById("id").innerHTML="Product:" + pno;
+            // document.getElementById("image").src=simage;
+            // document.getElementById("name").innerHTML="Product:" + name;
+            // document.getElementById("price").innerHTML="Price:" + price;
+        var id=document.createElement("p");
+        var node=document.createTextNode(pno);
+        id.appendChild(node);
+        
+        var nam=document.createElement("p");
+        var node=document.createTextNode(name);
+        nam.appendChild(node);
+
+        var amount=document.createElement("p");
+        var node=document.createTextNode(price);
+        amount.appendChild(node);
+
+        var image=document.createElement("img");
+        image.setAttribute("src",simage);
+        // image.setAttribute("height","200px");
+        // image.setAttribute("width","200px");
+        
+        var element=document.getElementById("data");
+        element.appendChild(image);
+        element.appendChild(id);
+        element.appendChild(nam);
+        element.appendChild(amount);
+       
+        }
+        
+        
+    </script>
+</html>

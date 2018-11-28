@@ -1,0 +1,44 @@
+<!-- product name
+product id
+product price
+product url -->
+<html>
+    <body>
+        NAME:<input type="text" id="p_name">
+            <br><br>
+        ID:<input type="text" id="p_id">
+            <br><br>
+        PRICE:<input type="text" id="p_price">
+            <br><br>
+        URL:<input type="text" id="p_img">
+            <br><br>
+        <!-- <button onclick="productdata()">ADD PRODUCT</button> -->
+        <input id="show" type="button" value="Submit" onclick=display()>
+        <br>
+        <!-- <br>
+        <p id="isp_name"></p>
+        <p id="isp_id"></p>
+        <p id="isp_price"></p>
+        <img id="isp_img"> -->
+        <p id="demo"></p>
+        
+        <script>
+            var products=[];
+            document.getElementById("demo").innerHTML=products;
+        function display(){
+            var name=document.getElementById("p_name").value;
+            var id=document.getElementById("p_id").value;
+            var price=document.getElementById("p_price").value;
+            var url=document.getElementById("p_img").value;
+        products.push(
+                name,
+                id,
+                price,
+                url
+        );
+        //console.log(products);
+        document.getElementById("demo").innerHTML=products;
+        }
+        </script>
+    </body>
+</html>
